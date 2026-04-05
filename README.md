@@ -1,5 +1,7 @@
 # 🎯 OpenClaw Core Skills
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-openclaw--skills-blue)](https://github.com/longman888/openclaw-skills)
+
 > 本技能库源自 [Claude Code](https://github.com/anthropics/claude-code) (free-code) 源码，经过系统性提取与适配，集成到 OpenClaw 环境。
 
 **核心技能** 是 OpenClaw 的系统级基础设施，为所有上层技能提供通用能力。
