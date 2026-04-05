@@ -1,5 +1,7 @@
 # 🎯 OpenClaw Core Skills
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-openclaw--skills-blue)](https://github.com/longman888/openclaw-skills)
+
 > This skill library is derived from [Claude Code](https://github.com/anthropics/claude-code) (free-code) source code, systematically extracted and adapted for the OpenClaw environment.
 
 **Core Skills** are system-level infrastructure for OpenClaw, providing universal capabilities for all upper-layer skills.
