@@ -12,7 +12,7 @@
 
 | 技能 | 描述 | 源码位置 |
 |------|------|----------|
-| **friday-dream** | 每周五收盘后自动整合记忆（Orient→Gather→Consolidate→Prune）| `tasks/DreamTask/` |
+| **friday-dream** | 每周自动整合记忆（Orient→Gather→Consolidate→Prune）| `tasks/DreamTask/` |
 | **context-compact** | 三层上下文压缩系统（Microcompact / Snip / AutoCompact）| `services/compact/` |
 | **streaming-tool-executor** | 流式工具执行器，并发安全工具并行执行 | `services/tools/StreamingToolExecutor.ts` |
 | **multi-agent** | Leader-Worker 编排系统，支持文件邮箱协议 | `src/utils/swarm/`, `src/tools/AgentTool/` |
