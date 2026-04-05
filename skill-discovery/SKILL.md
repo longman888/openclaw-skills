@@ -19,6 +19,7 @@ Discover and browse skills from OpenSpace's local skill library.
 |------|------|------|
 | **friday-dream** | 每周五收盘后自动整合记忆（Orient→Gather→Consolidate→Prune）| Claude Code DreamTask |
 | **context-compact** | 三层上下文压缩系统（Microcompact / Snip / AutoCompact）| Claude Code autoCompact |
+| **agent-nudge** | Agent主动记忆与技能进化系统（Nudge/Skills Hub/Self-Improvement）| Hermes Agent |
 
 ### ⚡ 工具执行
 

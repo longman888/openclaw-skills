@@ -14,6 +14,7 @@
 |------|------|----------|
 | **friday-dream** | 每周自动整合记忆（Orient→Gather→Consolidate→Prune）| `tasks/DreamTask/` |
 | **context-compact** | 三层上下文压缩系统（Microcompact / Snip / AutoCompact）| `services/compact/` |
+| **agent-nudge** | Agent主动记忆与技能进化（Nudge/Skills Hub/Self-Improvement）| Hermes Agent (`run_agent.py`) |
 | **streaming-tool-executor** | 流式工具执行器，并发安全工具并行执行 | `services/tools/StreamingToolExecutor.ts` |
 | **multi-agent** | Leader-Worker 编排系统，支持文件邮箱协议 | `src/utils/swarm/`, `src/tools/AgentTool/` |
 | **openharness-hooks** | Hook 系统（cost-tracker / subagent-notify）| 参考 HKUDS/OpenHarness |
@@ -88,6 +89,11 @@ OpenClaw Core System
 │
 ├── 上下文管理 (context-compact)
 │   └── 三层压缩 → Token预算保护 → 自动清理
+│
+├── Agent主动学习 (agent-nudge)
+│   ├── Nudges → 主动保存记忆
+│   ├── Skills Hub → 技能市场共享
+│   └── Self-Improvement → 技能自动进化
 │
 ├── 工具执行 (streaming-tool-executor)
 │   └── 并发/独占调度 → 75%性能提升

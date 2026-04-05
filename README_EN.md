@@ -14,6 +14,7 @@ All skills are **sourced from Claude Code source code** and can be used as infra
 |-------|-------------|----------------|
 | **friday-dream** | Weekly memory consolidation (Orient→Gather→Consolidate→Prune) | `tasks/DreamTask/` |
 | **context-compact** | 3-layer context compression (Microcompact / Snip / AutoCompact) | `services/compact/` |
+| **agent-nudge** | Agent proactive memory & skill evolution (Nudge/Skills Hub/Self-Improvement) | Hermes Agent (`run_agent.py`) |
 | **streaming-tool-executor** | Streaming tool executor with parallel execution for concurrency-safe tools | `services/tools/StreamingToolExecutor.ts` |
 | **multi-agent** | Leader-Worker orchestration system with file mailbox protocol | `src/utils/swarm/`, `src/tools/AgentTool/` |
 | **openharness-hooks** | Hook system (cost-tracker / subagent-notify) | Reference: HKUDS/OpenHarness |
@@ -88,6 +89,11 @@ OpenClaw Core System
 │
 ├── Context Management (context-compact)
 │   └── 3-layer compression → Token budget protection → Auto cleanup
+│
+├── Agent Proactive Learning (agent-nudge)
+│   ├── Nudges → Proactive memory saving
+│   ├── Skills Hub → Skill marketplace sharing
+│   └── Self-Improvement → Automatic skill evolution
 │
 ├── Tool Execution (streaming-tool-executor)
 │   └── Concurrent/exclusive scheduling → 75% performance boost
