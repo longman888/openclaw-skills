@@ -2,53 +2,22 @@
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-openclaw--skills-blue)](https://github.com/longman888/openclaw-skills)
 
-> This skill library is derived from [Claude Code](https://github.com/anthropics/claude-code) (free-code) source code, systematically extracted and adapted for the OpenClaw environment.
-
-**Core Skills** are system-level infrastructure for OpenClaw, providing universal capabilities for all upper-layer skills.
+> This skill library is **derived from [Claude Code](https://github.com/anthropics/claude-code) (free-code) source code**, systematically extracted and adapted for the OpenClaw environment.
 
 ---
 
 ## 📦 Core Skills Index
 
-### 🧠 Memory & Context
+All skills are **sourced from Claude Code source code** and can be used as infrastructure by other skills.
 
-| Skill | Directory | Description |
-|-------|-----------|-------------|
-| **friday-dream** | `friday-dream/` | Weekly memory consolidation (Orient→Gather→Consolidate→Prune) |
-| **context-compact** | `context-compact/` | 3-layer context compression (Microcompact / Snip / AutoCompact) |
-
-### ⚡ Tool Execution
-
-| Skill | Directory | Description |
-|-------|-----------|-------------|
-| **streaming-tool-executor** | `streaming-tool-executor/` | Streaming tool executor with parallel execution for concurrency-safe tools, 75% performance improvement |
-
-### 🤖 Multi-Agent
-
-| Skill | Directory | Description |
-|-------|-----------|-------------|
-| **multi-agent** | `multi-agent/` | Leader-Worker orchestration system with file mailbox protocol |
-| **openharness-hooks** | `openharness-hooks/` | Hook system (cost-tracker / subagent-notify) |
-
-### 📈 Quantitative Trading
-
-| Skill | Directory | Description |
-|-------|-----------|-------------|
-| **stock-data** | `stock-data/` | Stock data acquisition (AkShare / Biying API / Tonghuashun) |
-| **stock-technical** | `stock-technical/` | Technical indicators (MA / MACD / KDJ / RSI / BOLL) |
-| **stock-strategy** | `stock-strategy/` | Trading signal generation (Trend / Mean Reversion / Momentum) |
-| **stock-risk** | `stock-risk/` | Risk management (VaR / Stop Loss / Position Sizing) |
-| **strategy-evolver** | `strategy-evolver/` | Self-evolving strategy (Generate→Backtest→Evaluate→Mutate) |
-| **china-stock-analysis** | `china-stock-analysis/` | A-share comprehensive analysis framework |
-
-### 🔧 Infrastructure
-
-| Skill | Directory | Description |
-|-------|-----------|-------------|
-| **trigger-scheduler** | `trigger-scheduler/` | Cron task scheduling (with market hours support) |
-| **delegate-task** | `delegate-task/` | Task delegation to OpenSpace |
-| **metaso-search** | `metaso-search/` | Metaso AI search (default search engine) |
-| **skill-discovery** | `skill-discovery/` | Skill discovery and indexing |
+| Skill | Description | Source Location |
+|-------|-------------|----------------|
+| **friday-dream** | Weekly memory consolidation (Orient→Gather→Consolidate→Prune) | `tasks/DreamTask/` |
+| **context-compact** | 3-layer context compression (Microcompact / Snip / AutoCompact) | `services/compact/` |
+| **streaming-tool-executor** | Streaming tool executor with parallel execution for concurrency-safe tools | `services/tools/StreamingToolExecutor.ts` |
+| **multi-agent** | Leader-Worker orchestration system with file mailbox protocol | `src/utils/swarm/`, `src/tools/AgentTool/` |
+| **openharness-hooks** | Hook system (cost-tracker / subagent-notify) | Reference: HKUDS/OpenHarness |
+| **skill-discovery** | Skill discovery and indexing | Custom |
 
 ---
 
@@ -92,15 +61,10 @@ summary = dream.run()
 ```
 friday-dream
   └── context-compact (compress context during consolidation)
-  └── skill_context (PortfolioData for positions)
 
 multi-agent
   └── openharness-hooks (subagent lifecycle notifications)
   └── streaming-tool-executor (parallel tool execution)
-
-strategy-evolver
-  └── context-compact (compress backtest context)
-  └── stock-data (historical data)
 ```
 
 ---
@@ -108,7 +72,6 @@ strategy-evolver
 ## 📚 Skill Documentation
 
 Each skill has its own `SKILL.md` file containing:
-
 - **Concept** — What problem the skill solves
 - **API Reference** — Function signatures and parameters
 - **Usage Examples** — Common scenario code
@@ -132,9 +95,6 @@ OpenClaw Core System
 ├── Multi-Agent (multi-agent)
 │   └── Leader-Worker → File mailbox protocol
 │
-├── Strategy Evolution (strategy-evolver)
-│   └── Generate→Backtest→Evaluate→Mutate loop
-│
 └── Hook System (openharness-hooks)
     └── cost-tracker + subagent-notify
 ```
@@ -152,8 +112,6 @@ Claude Code original uses BSD License, allowing free use, modification, and dist
 ## 🙏 Acknowledgments
 
 - **Anthropic** — Claude Code provides excellent architecture reference
-- **HKUDS/OpenHarness** — Hook system design reference
-- **AkShare** — A-share data interface support
 
 ---
 

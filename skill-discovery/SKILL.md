@@ -2,8 +2,7 @@
 name: skill-discovery
 description: |
   Search for reusable skills across OpenSpace's local registry and cloud community.
-  This skill registry indexes BOTH built-in skills AND Claude Code-derived core skills.
-  Reusing proven skills saves tokens, improves reliability, and extends your capabilities.
+  This skill registry indexes Claude Code-derived core skills ONLY.
 ---
 
 # Skill Discovery — 技能发现系统
@@ -12,7 +11,7 @@ Discover and browse skills from OpenSpace's local skill library.
 
 ## 核心技能索引 (Core Skills from Claude Code)
 
-以下技能**源自 Claude Code (free-code) 源码**，经过适配后集成到 OpenClaw：
+以下技能**源自 Claude Code (free-code) 源码**：
 
 ### 🧠 记忆与上下文
 
@@ -33,25 +32,6 @@ Discover and browse skills from OpenSpace's local skill library.
 |------|------|------|
 | **multi-agent** | Leader-Worker 编排系统，支持文件邮箱协议 | Claude Code Swarm/AgentTool |
 | **openharness-hooks** | Hook 系统（cost-tracker / subagent-notify）| HKUDS/OpenHarness |
-
-### 📈 量化策略
-
-| 技能 | 描述 | 来源 |
-|------|------|------|
-| **stock-data** | 股票数据获取（AkShare / 必盈API / 同花顺）| 自研 |
-| **stock-technical** | 技术指标计算（MA / MACD / KDJ / RSI / BOLL）| 自研 |
-| **stock-strategy** | 交易信号生成（趋势跟踪/均值回归/动量）| 自研 |
-| **stock-risk** | 风险管理系统（VaR / 止损 / 仓位管理）| 自研 |
-| **strategy-evolver** | 策略自我演化（生成→回测→评估→变异）| 自研 |
-| **china-stock-analysis** | A股综合分析框架 | 自研 |
-
-### 🔧 基础设施
-
-| 技能 | 描述 | 来源 |
-|------|------|------|
-| **trigger-scheduler** | Cron 任务调度（支持市场时间）| 自研 |
-| **delegate-task** | 任务委托给 OpenSpace 执行 | 自研 |
-| **metaso-search** | 秘塔AI搜索（默认搜索引擎）| 自研 |
 
 ---
 
@@ -86,29 +66,11 @@ summary = dream.run()
 ```
 friday-dream
   └── context-compact (记忆整合时压缩上下文)
-  └── skill_context (PortfolioData 获取持仓)
 
 multi-agent
   └── openharness-hooks (subagent 生命周期通知)
   └── streaming-tool-executor (并行工具执行)
-
-strategy-evolver
-  └── context-compact (压缩回测上下文)
-  └── stock-data (获取历史数据)
 ```
-
----
-
-## 使用场景
-
-| 场景 | 推荐技能 |
-|------|----------|
-| 批量分析多只股票 | streaming-tool-executor |
-| 防止上下文溢出 | context-compact |
-| 周五收盘后记忆整合 | friday-dream |
-| 并行采集数据 + 串行执行风控 | streaming-tool-executor |
-| 策略自我优化 | strategy-evolver |
-| 多任务分解执行 | multi-agent |
 
 ---
 
